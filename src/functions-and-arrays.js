@@ -46,6 +46,7 @@ function sumNumbers(numbers) {}
      }
 return total;
     }
+    
 
 // Iteration #3.1 Bonus:
 function sum(Array) {
@@ -59,40 +60,65 @@ function sum(Array) {
 
 
 
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
-const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9]
 
-function averageNumbers() {}
+function averageNumbers(numbersAvg) {
+  if (numbersAvg.length === 0) {
+    return null;
+  }
+  let sumArray = 0;
+  for (let nbr of numbersAvg) {
+    sumArray += nbr;
+    avarage = sumArray / numbersAvg.length;
+  }
 
+  return avarage;
+}
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
-
+function averageWordLength(avarageArray) {
+  if (avarageArray.length === 0) {
+    return null;
+  } else if (avarageArray.length > 0) {
+    let sum = 0;
+    for (let i = 0; i < avarageArray.length; i++) {
+      sum += avarageArray[i].length;
+    }
+    return sum / avarageArray.length;
+  }
+}
 // Bonus - Iteration #4.1
 function avg() {}
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
+  "crab",
+  "poison",
+  "contagious",
+  "simple",
+  "bring",
+  "sharp",
+  "playground",
+  "poison",
+  "communion",
+  "simple",
+  "bring",
 ];
 
-function uniquifyArray() {}
-
-
-
+function uniquifyArray(uniArr) {
+  if (uniArr.length === 0) {
+    return null;
+  }
+  let duplicates = uniArr.filter(
+    (item, index, arr) => arr.indexOf(item) == index
+  );
+  return duplicates;
+}
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
